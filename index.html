@@ -6,9 +6,34 @@
   <title>Your Name | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Background Gradient */
+    body {
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #111827);
+    }
+
+    /* Vertical Curvy Line */
+    .line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #4b5563,
+        #4b5563 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      z-index: 0;
+    }
+
+    /* Animation */
     .fade-in-left, .fade-in-right {
       opacity: 0;
       transition: all 0.8s ease-out;
+      position: relative;
+      z-index: 1;
     }
 
     .fade-in-left {
@@ -25,56 +50,59 @@
     }
   </style>
 </head>
-<body class="font-sans bg-gray-900 text-gray-100">
+<body class="font-sans text-gray-100 overflow-x-hidden">
+
+  <!-- Decorative Line -->
+  <div class="line hidden sm:block"></div>
 
   <!-- Header -->
-  <header class="bg-gray-800 py-8 px-6 shadow-lg">
+  <header class="bg-gray-800 py-8 px-6 shadow-lg relative z-10">
     <div class="max-w-6xl mx-auto text-center">
       <h1 class="text-4xl font-bold mb-2">Your Name</h1>
-      <p class="text-gray-400 text-lg">Full Stack Developer & Creator</p>
+      <p class="text-gray-400 text-lg">Creative Developer & Portfolio</p>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-5xl mx-auto px-6 py-20 space-y-28">
+  <main class="max-w-6xl mx-auto px-6 py-24 space-y-40 relative z-10">
 
-    <h2 class="text-3xl font-semibold text-center mb-16">Featured Projects</h2>
+    <h2 class="text-3xl font-semibold text-center mb-12">Featured Projects</h2>
 
     <!-- Project 1 -->
-    <div class="fade-in-left flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6">
+    <div class="fade-in-left flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6 max-w-3xl mx-auto">
       <div class="w-full">
         <h3 class="text-2xl font-bold">Project One</h3>
-        <p class="text-gray-400 text-lg mb-3">Description of the project. Built with HTML, CSS, JavaScript.</p>
-        <a href="https://github.com/your-username/project1" target="_blank" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
+        <p class="text-gray-400 text-lg mb-3">A creative tool or product built with React, Tailwind, and Node.js.</p>
+        <a href="https://github.com/your-username/project1" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
       </div>
     </div>
 
     <!-- Project 2 -->
-    <div class="fade-in-right flex flex-col sm:flex-row-reverse items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6">
+    <div class="fade-in-right flex flex-col sm:flex-row-reverse items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6 max-w-3xl mx-auto">
       <div class="w-full">
         <h3 class="text-2xl font-bold">Project Two</h3>
-        <p class="text-gray-400 text-lg mb-3">Another amazing tool built with Python and Flask.</p>
-        <a href="https://github.com/your-username/project2" target="_blank" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
+        <p class="text-gray-400 text-lg mb-3">A web app using Flask and Tailwind, solving real user problems.</p>
+        <a href="https://github.com/your-username/project2" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
       </div>
     </div>
 
     <!-- Project 3 -->
-    <div class="fade-in-left flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6">
+    <div class="fade-in-left flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6 max-w-3xl mx-auto">
       <div class="w-full">
         <h3 class="text-2xl font-bold">Project Three</h3>
-        <p class="text-gray-400 text-lg mb-3">Something cool made with Vue and Firebase.</p>
-        <a href="https://github.com/your-username/project3" target="_blank" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
+        <p class="text-gray-400 text-lg mb-3">An automation tool written in Python, deployed with Docker.</p>
+        <a href="https://github.com/your-username/project3" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
       </div>
     </div>
 
   </main>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-500 text-sm py-10">
+  <footer class="text-center text-gray-500 text-sm py-12 relative z-10">
     © 2025 Your Name. All rights reserved.
   </footer>
 
-  <!-- Scroll Reveal Script -->
+  <!-- Scroll Animation Script -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -83,9 +111,11 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     document.querySelectorAll('.fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
+
