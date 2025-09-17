@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-gray-900 text-gray-100">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Felix Coupe | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .fade-in-left, .fade-in-right {
+    .fade-in-left,
+    .fade-in-right {
       opacity: 0;
       transition: all 0.8s ease-out;
     }
@@ -25,6 +27,7 @@
     }
   </style>
 </head>
+
 <body class="font-sans bg-gray-900 text-gray-100">
 
   <!-- Header -->
@@ -32,12 +35,9 @@
   <header class="bg-gray-800 py-8 px-6 shadow-lg relative z-10">
     <div class="max-w-6xl mx-auto text-center">
       <h1 class="text-4xl font-bold mb-4">Felix Coupe</h1>
-      <img 
-        src="headshot.jpeg" 
-        alt="Felix Coupe" 
-        class="mx-auto mb-6 w-36 h-36 rounded-full object-cover border-4 border-indigo-600 shadow-lg"
-      />
-      <p class="text-gray-400 text-lg">Full Stack Developer | Machine Learning Enthusiast</p>
+      <img src="headshot.jpeg" alt="Felix Coupe"
+        class="mx-auto mb-6 w-36 h-36 rounded-full object-cover border-4 border-indigo-600 shadow-lg" />
+      <p class="text-gray-400 text-lg">MEng Computer Science | C++ Developer</p>
     </div>
   </header>
 
@@ -50,16 +50,21 @@
     <div class="fade-in-left flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6">
       <div class="w-full">
         <h3 class="text-2xl font-bold">AI-Enhanced Waste Collection</h3>
-        <p class="text-gray-400 text-lg mb-3">Using A Flutter and Django framework, this application optimises truck routing using Prophet. </p>
-        <a href="https://github.com/felixUOB/AI-Enhanced_Waste_Collection_2024" target="_blank" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
+        <p class="text-gray-400 text-lg mb-3">Using A Flutter and Django framework, this application optimises truck
+          routing using Prophet. </p>
+        <a href="https://github.com/felixUOB/AI-Enhanced_Waste_Collection_2024" target="_blank"
+          class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
       </div>
     </div>
 
-    <div class="fade-in-right flex flex-col sm:flex-row-reverse items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6">
+    <div
+      class="fade-in-right flex flex-col sm:flex-row-reverse items-center bg-gray-800 rounded-2xl shadow-xl p-10 gap-6">
       <div class="w-full">
         <h3 class="text-2xl font-bold">C++ Rendering Engine</h3>
-        <p class="text-gray-400 text-lg mb-3">Rendering Engine and Custom Map Loader built with C++, OpenGL and helper libraries.</p>
-        <a href="https://github.com/felixUOB/Rendering_Engine" target="_blank" class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
+        <p class="text-gray-400 text-lg mb-3">Rendering System and Custom Map Loader built with C++, OpenGL and helper
+          libraries.</p>
+        <a href="https://github.com/felixUOB/Rendering_Engine" target="_blank"
+          class="text-indigo-400 hover:underline text-lg">View on GitHub</a>
       </div>
     </div>
 
@@ -84,4 +89,5 @@
     document.querySelectorAll('.fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>
